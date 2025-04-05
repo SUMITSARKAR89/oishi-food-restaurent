@@ -1,0 +1,384 @@
+:root{
+    /* background color  */
+   --primary-color: #121212;
+   --text-color: #ffffff;
+   --btn-color: #700002;
+    --text-color2: #bfbfbf;
+   
+
+    
+    /* gradient color  */
+    
+    --gradient-1: linear-gradient(120deg, #7a93b826, #7a93b808);
+    --gradient-2: #7a93b81A;
+    --gradient-3: linear-gradient(360deg, #7a93b826, #7a93b81A);
+    
+   
+    /*others color*/
+    --scrollbar-color: #263040;
+    --scrollbar-thump: #84b0f5;
+    --scrollbar-hover: #6f89b6;
+   
+    /* transition  */
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease;
+    
+
+     /* fontsize  */
+     --font-14px-small: 0.875rem;
+     --font-16px-p: 1rem;
+     --font-18px-medium: 1.125rem;
+     --font-24px-large: 1.5rem;
+
+     --font-18px-h5: 1.125rem;
+     --font-20px-h4:1.25rem;
+     --font-38px-h3: 2.375rem;
+     --font-50px-h2:3.125rem;
+     --font-70px-h1: 4.375rem;
+    
+    
+
+
+     /* font-weight  */
+    
+
+     /* z-index  */
+     --z-minus:-1;
+     --z-zero:0;
+     --z-low:1;
+     --z-high:10;
+     --z-100:100;
+     --z-tooltop:1000;
+     --z-fix:1100;
+     --z-overlay:1110;
+     --z-modal:1990;
+     --z-max:9999;
+
+
+    }
+    h1,h2,h3,h4,h5, a, .logo span{
+        font-family: "Forum", serif;
+        color: var(--text-color);
+
+    }
+
+    /* ----------------------------------------
+      ============= reset css  ==============
+      -------------------------------------------*/
+    *,
+    *::after,
+    *::before{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+    li{
+        list-style: none;
+    }
+
+    a,
+    img,
+    input,
+    button,
+    i{
+        display: block;
+        text-transform: capitalize;
+    }
+    button{
+     background: none;
+     border: 0;
+     outline: 0;
+     
+     cursor: pointer;
+    }
+    
+    a{
+        text-decoration: none;
+        text-align: center;
+    }
+    img{
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;
+    }
+   
+    html{
+        scroll-behavior: smooth;
+       
+    }
+    body{
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        position: relative;
+        font-family: "Figtree", sans-serif;
+        background: var(--primary-color);
+        color: var(--text-color);
+        
+        transition:  all 0.5s ease-in-out;
+        animation: zoom 0.5s ease-in-out;
+        overflow-x: hidden;
+
+        /* font-family: "Forum", serif; */
+
+      
+    }
+    /* ============----page scroll bar-----============== */
+::-webkit-scrollbar { 
+        width: 5px; 
+        
+    }
+
+::-webkit-scrollbar-track { 
+        overflow: hidden;
+        background-color: var(--scrollbar-color);
+    }
+   
+::-webkit-scrollbar-thumb {
+   
+    border-radius:100px;
+    background-color: var(--scrollbar-thump);
+    transition: 0.3s;
+   
+  }
+  ::-webkit-scrollbar-thumb:hover{
+  background-color: var(--scrollbar-hover);
+  }
+/* =====================others=========================== */
+.container{
+    max-width: 100%;
+    padding: 0.5% 1% ;
+    margin: 0 7% ;
+    
+}
+   section{
+    margin: 2% 7%;
+    max-width: 100%;
+}
+
+@keyframes zoom{
+    from{
+        transform: scale(0.5);
+        opacity: 0;
+    }to{
+        transform: scale(1);
+        opacity: 1;
+    }
+ }
+
+  /* ----------------------------------------
+ ============= header start here  ==============
+ -------------------------------------------*/ 
+ header{
+    max-width: 100%;
+    width: 100%;
+    background: var(--primary-color);
+   
+    height: auto;
+    padding: 10px 75px;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  
+ }
+ header .head{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    opacity: 1;
+    transition: var(--transition-1);
+   
+ }
+ .head .logo{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2px;
+    cursor: pointer;
+ }
+ .logo img{
+    width: 35px;
+ }
+ .logo span{
+    font-size: var(--font-38px-h3);
+    text-transform: uppercase;
+ }
+ .head nav{
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+ }
+ .head nav a{
+    margin: 0 10px;
+    padding: 2px;
+    color: var(--text-color);
+    font-size: var(--font-16px-p);
+    font-weight: 500;
+    transition: var(--transition-2);
+ }
+ .head nav a:hover{
+    color: var(--text-color2);
+ }
+ .head nav a:nth-child(4){
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+ }
+ .head nav a:nth-child(5){
+    border: 1px solid var(--text-color2);
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: var(--transition-2);
+ }
+ .head nav a:nth-child(5):hover{
+    border: 1px solid #6e6c6c;
+
+ }
+ #navigation-bar{
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 40px;
+    opacity: 0;
+ }
+ #navigation-bar .nav-logo{
+    width: 40px;
+    transition: var(--transition-1);
+    transform: scale(1);
+    display: block;
+ }
+ #navigation-bar .nav-logo:hover{
+    transform: scale(1.05);
+ }
+ .menu-nav{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+ }
+ .menu-nav .menu{
+    max-width: 100%;
+   
+    display: flex;
+    padding: 15px;
+    position: relative;
+    
+
+ }
+ .menu-nav .menu i{
+    font-size: var(--font-24px-large);
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+ }
+ .menu-nav .menu .close{
+    display: none;
+ }
+ .menu-nav .menu .open{
+    display: block;
+ }
+ .menu-nav a{
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: var(--font-16px-p);
+    text-transform: uppercase;
+    color: var(--text-color);
+    transition: var(--transition-1);
+    background: transparent;
+    font-weight: 500;
+ }
+ .menu-nav a:hover{
+    
+    border: 1px solid #4d4c4c;
+    background: var(--btn-color);
+ }
+
+ .navigation-link{
+    max-width: 100%;
+    width: 100%;
+    background:#24232385;
+    backdrop-filter: blur(50px);
+    border-radius: 0 0 20px 20px;
+    border-bottom: 2px solid #852c2d52;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 80px;
+    padding: 50px;
+ }
+ .navigation-link .link-list{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+ .navigation-link .link-list a{
+    padding: 5px;
+    max-width: 100%;
+    color: var(--text-color);
+    font-size: var(--font-18px-medium);
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: var(--transition-1);
+
+ }
+ .navigation-link .link-list a:hover{
+    text-decoration: underline;
+    letter-spacing: 2px;
+    color: var(--text-color2);
+ }
+ .navigation-link .nav-social{
+    max-width: 100%;
+    display: flex;
+    gap: 10px;
+ }
+ .navigation-link .nav-social i{
+    font-size: var(--font-38px-h3);
+    color: var(--text-color2);
+    margin: 5px;
+    cursor: pointer;
+    transition: var(--transition-2);
+    opacity: 1;
+ }
+ .navigation-link .nav-social i:hover{
+    opacity: 0.6;
+
+ }
+ /* ----------------------------------------
+ ============= main start here  ==============
+ -------------------------------------------*/ 
+ @media (max-width:980px){
+    header .head{ 
+        opacity: 0;
+    }
+    #navigation-bar{
+        opacity: 1;
+    }
+ }
