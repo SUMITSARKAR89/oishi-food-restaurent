@@ -11,4 +11,14 @@ closeMenu.addEventListener("click", () => {
     navigationLink.style.opacity = "0";
     openMenu.style.display = "block";
     closeMenu.style.display = "none";
-})
+});
+
+
+const faqCard = document.querySelectorAll('.faq-card');
+
+faqCard.forEach( faqs => {
+    faqs.addEventListener("click", () => {
+        faqs.classList.toggle("active");
+    })
+});
+
