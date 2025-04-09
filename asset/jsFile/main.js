@@ -14,6 +14,18 @@ closeMenu.addEventListener("click", () => {
 });
 
 
+const linkButton = document.querySelectorAll('.btn_one');
+linkButton.forEach((btn ) => {
+    btn.addEventListener('click', () => {
+        linkButton.forEach( btn => {
+            btn.classList.remove('active');
+        });
+        btn.classList.add('active');
+    });
+});
+
+// ===============================accordion====================
+
 const faqCard = document.querySelectorAll('.faq-card');
 
 faqCard.forEach( faqs => {
@@ -21,4 +33,15 @@ faqCard.forEach( faqs => {
         faqs.classList.toggle("active");
     })
 });
+
+// =====================more btn===========================
+const moreBtn = document.querySelector(".more-btn");
+const moreImageGallery = document.querySelector(".more-image-gallery");
+
+moreBtn.addEventListener("click", () => {
+    moreImageGallery.style.display = "block";
+    moreBtn.style.opacity = "0";
+});
+
+
 
