@@ -1102,6 +1102,10 @@ footer .footer-right{
     margin:  0 auto;
    
     height: auto;
+    cursor: pointer;
+   
+    position: relative;
+    z-index: 2;
 }
 
 .faq-container-card .faq-card{
