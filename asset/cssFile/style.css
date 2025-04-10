@@ -201,6 +201,7 @@
     top: 0;
     left: 0;
     z-index: 2;
+    transition: var(--transition-2);
   
  }
  header .head{
@@ -338,12 +339,12 @@
     width: 100%;
     background:#24232385;
     backdrop-filter: blur(50px);
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 60px 0px;
     border-bottom: 2px solid #852c2d52;
     position: absolute;
     top: 70px;
     left: 0;
-    height: 60vh;
+    height: 65vh;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -402,16 +403,7 @@ transition: var(--transition-2);
  /* ----------------------------------------
  ============= main start here  ==============
  -------------------------------------------*/ 
- @media (max-width:980px){
-    header .head{ 
-        opacity: 0;
-    }
-    #navigation-bar{
-        opacity: 1;
-        display: flex;
-    }
- }
-
+ 
  #hero{
    max-width: 100%;
    margin-top: 70px;
@@ -622,6 +614,7 @@ footer,
    flex-direction: column;
    gap: 5px;
    position: relative;
+
 }
 .about-container .about-card:nth-child(1){
    width: 45%;
@@ -1033,6 +1026,7 @@ footer .footer-right{
    font-family: "Figtree", sans-serif;
    color: var(--text-color);
    transition: var(--transition-1);
+   text-align: center;
 }
 .footer-links a:hover{
    color: var(--text-color2);
